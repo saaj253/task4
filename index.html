@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2196F3">
+    <meta name="description" content="Simple E-Commerce PWA">
+    <title>ShopHub - E-Commerce PWA</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%232196F3' width='192' height='192'/><text x='50%' y='50%' font-size='100' fill='white' text-anchor='middle' dy='.3em'>S</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ShopHub</h1>
+            <div class="header-actions">
+                <button id="notification-btn" class="btn-icon" title="Enable Notifications">🔔</button>
+                <button id="cart-btn" class="btn-icon">🛒 <span id="cart-count">0</span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Welcome to ShopHub</h2>
+                <p>Shop online, works offline!</p>
+                <p class="status" id="status"></p>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="product-grid" id="products">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="cart-section" id="cart-section" style="display: none;">
+            <div class="container">
+                <h2>Shopping Cart</h2>
+                <div id="cart-items">
+                    <!-- Cart items will be displayed here -->
+                </div>
+                <div class="cart-summary">
+                    <h3>Total: $<span id="total">0.00</span></h3>
+                    <button id="checkout-btn" class="btn btn-primary">Checkout</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ShopHub PWA. All rights reserved. Works offline!</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
